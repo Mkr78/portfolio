@@ -125,13 +125,5 @@ export type PortfolioContent = {
     emailCta: string;
     linkedinCta: string;
     githubCta: string;
-    form: {
-      name: string;
-      email: string;
-      message: string;
-      submit: string;
-      hint: string;
-      providerNote: string;
-    };
   };
 };

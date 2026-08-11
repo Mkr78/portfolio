@@ -54,7 +54,6 @@ Les données principales sont dans :
 5. Build command : `npm run build`.
 6. Ajouter les variables d'environnement :
    - `NEXT_PUBLIC_SITE_URL=https://votre-url.vercel.app`
-   - `NEXT_PUBLIC_FORMSPREE_ENDPOINT=` si le formulaire passe par Formspree.
 
 Vercel fournit HTTPS automatiquement, CDN, previews par branche et une URL gratuite en `.vercel.app`.
 
@@ -63,7 +62,7 @@ Vercel fournit HTTPS automatiquement, CDN, previews par branche et une URL gratu
 - Les fichiers `.env*` sont ignorés par Git.
 - `.env.example` documente les variables publiques attendues.
 - Les headers de base sont configurés dans `next.config.ts`.
-- Le formulaire ne loggue pas les données personnelles.
+- Le contact se fait par email direct, sans formulaire ni service tiers.
 - Le CV n'est pas publié pour l'instant. Il sera ajouté dans `public/cv.pdf` après hébergement, une fois l'URL publique intégrée au PDF.
 
 ## Pages

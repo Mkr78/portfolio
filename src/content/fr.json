@@ -619,14 +619,6 @@
     "copyEmail": "Copier l’email",
     "emailCta": "Email",
     "linkedinCta": "LinkedIn",
-    "githubCta": "GitHub",
-    "form": {
-      "name": "Nom",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Envoyer",
-      "hint": "Formulaire relié à Formspree (modifiable).",
-      "providerNote": "Ou utilisez la route serverless Vercel en option."
-    }
+    "githubCta": "GitHub"
   }
 }

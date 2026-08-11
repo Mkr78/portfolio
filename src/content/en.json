@@ -1,0 +1,458 @@
+{
+  "seo": {
+    "title": "Portfolio — Mahmoud Mohamed | Big Data & AI Engineer",
+    "description": "Mahmoud Mohamed builds secure data/AI platforms: Kafka/Spark streaming, pipelines, APIs, dashboards, and fullstack products.",
+    "keywords": [
+      "Big Data",
+      "AI",
+      "Spark",
+      "Kafka",
+      "Security",
+      "Fullstack",
+      "DevOps",
+      "Cergy",
+      "Project lead"
+    ],
+    "ogTitle": "Mahmoud Mohamed — Big Data & AI Engineer",
+    "ogDescription": "Streaming, ML/DL, security by design, product-grade demos.",
+    "headline": "Big Data & AI Engineer (Secure IS expert) — IT Project Lead"
+  },
+  "hero": {
+    "title": "I build secure data/AI platforms: streaming, ML/DL, fullstack.",
+    "subtitle": "Mahmoud Mohamed · Cergy (FR) · Big Data & AI Engineer | Secure IS expert | IT project lead.",
+    "highlight": "Fast delivery, security by design, product mindset.",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact me",
+    "badges": ["Big Data", "AI/ML/DL", "Security", "Fullstack", "DevOps"]
+  },
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "about": {
+    "title": "About",
+    "pitch": "I design dependable data/AI platforms: real-time ingestion, ML/DL, APIs, dashboards, automation, with security-first reflexes.",
+    "contribution": [
+      "Product mindset: fast scoping, POC → MVP, demos that reassure.",
+      "Pragmatic tech lead: prioritization, managed debt, lightweight docs.",
+      "Security culture: secrets, auth, access control, stream validation."
+    ],
+    "securityByDesign": [
+      "Auth & federation: JWT, sessions, short expirations, roles.",
+      "Data protection: encryption in transit, cleaning & anonymization.",
+      "Secrets & ops: env isolation, rotation, audit and logging.",
+      "Quality: strict validation, API tests, load guardrails."
+    ],
+    "values": [
+      "Bias for action, rapid iterations.",
+      "Observability before premature scale.",
+      "Experiments guided by impact."
+    ]
+  },
+  "featuredProjects": ["hackathon-ia", "pipeline-musique", "labs-kafka"],
+  "projects": [
+    {
+      "slug": "hackathon-ia",
+      "title": "Hackathon #1 — Twitter-like platform + FER AI",
+      "tagline": "Real-time social app + facial expression recognition delivered in 4 days",
+      "type": "Fullstack + AI",
+      "summary": "Feed, real-time notifications, FER via webcam, secure Node API.",
+      "tags": ["Fullstack", "AI/ML", "Real-time", "Security", "Docker"],
+      "problem": "Ship a rich social platform with a live AI service in a single weekend without dropping basic security.",
+      "solution": "Modular build: React front, Node/Express API + MongoDB, Flask AI service (CNN FER), Socket.io for realtime. Flow: webcam → Flask API → emotion result → badge in UI.",
+      "architecture": "React front → Node API (JWT auth, validation) → MongoDB Atlas → Socket.io → Flask FER service.",
+      "diagram": "graph LR; UI[React front + feed]-->API[Node/Express API]; API-->Auth[(JWT + MongoDB)]; API-->Socket[Socket.io]; API-->IA[Flask FER API]; IA-->API; API-->UI;",
+      "stack": ["React", "Node/Express", "MongoDB Atlas", "Flask", "CNN FER", "Socket.io", "JWT", "Docker"],
+      "highlights": [
+        "Tweets 280 chars, media, hashtags/@mentions, likes/RT/comments, bookmarks.",
+        "Real-time notifications + search + profiles.",
+        "FER AI: 7 emotions + playful “Mona Lisa” mode for the demo."
+      ],
+      "results": [
+        "Delivered in 4 days with a stable demo.",
+        "Product-focused UX (clear CTAs, fast onboarding)."
+      ],
+      "learnings": [
+        "Front/back/AI orchestration under time pressure.",
+        "Socket.io rooms and Mongo query budgeting.",
+        "Quick-hardening: payload validation and strict CORS."
+      ],
+      "security": [
+        "Bcrypt hashing + short-lived JWT.",
+        "Payload validation (body, media sizes).",
+        "Locked CORS + basic rate limits."
+      ],
+      "impact": "Credible demo of a social platform + AI shipped at hackathon speed.",
+      "status": "Product demo",
+      "links": {
+        "repo": "https://github.com/Mkr78",
+        "demo": "",
+        "doc": ""
+      }
+    },
+    {
+      "slug": "pipeline-musique",
+      "title": "Real-time music events pipeline + dashboard",
+      "tagline": "Kafka ingestion → Spark Structured Streaming → HDFS → Flask API → React dashboard",
+      "type": "Big Data / Streaming",
+      "summary": "End-to-end streaming + storage + audio dashboard with monitoring.",
+      "tags": ["Big Data", "Streaming", "Spark", "Kafka", "Dashboard"],
+      "problem": "Ingest and process music events in real time with durable storage and an API layer.",
+      "solution": "Python producer → Kafka → Spark Structured Streaming (clean/enrich) → HDFS (bronze Parquet) → gold batch → Flask API → React dashboard with audio player.",
+      "architecture": "Docker Compose orchestration, dedicated topics, Spark checkpoints, bronze/parquet layers, REST exposure on Flask + reactive UI.",
+      "diagram": "graph TD; Producer[Python Producer]-->Kafka[Kafka topics]; Kafka-->Spark[Spark Structured Streaming]; Spark-->HDFS[(HDFS Bronze Parquet)]; HDFS-->Batch[Gold/Curated batch]; Batch-->API[Flask API]; API-->Dashboard[React dashboard + player]; Dashboard-->Users",
+      "stack": ["Python", "Kafka", "Spark Structured Streaming", "HDFS", "Parquet", "Flask", "React", "Docker Compose"],
+      "highlights": [
+        "Kafka/Spark healthchecks + latency alerts.",
+        "Versioned schemas + replay for debugging.",
+        "Dashboard with filters, audio timeline, metric cards."
+      ],
+      "results": [
+        "End-to-end data/AI demo ready for ML add-ons.",
+        "Documented architecture (diagram + data paths)."
+      ],
+      "learnings": [
+        "Latency handling and Kafka offsets.",
+        "Spark checkpoints + repartition tuning.",
+        "Reproducible Docker packaging + HDFS init."
+      ],
+      "security": [
+        "Secret isolation (env) and Kafka/HDFS ACL principles.",
+        "Cleaning sensitive data before storage.",
+        "Observability (structured logs, metadata)."
+      ],
+      "impact": "Solid base to plug recommendation or anomaly detection models.",
+      "links": {
+        "repo": "https://github.com/Mkr78",
+        "demo": "",
+        "doc": ""
+      }
+    },
+    {
+      "slug": "labs-kafka",
+      "title": "Kafka + Spark + Hadoop labs",
+      "tagline": "Three concrete prototypes showing Big Data patterns",
+      "type": "Big Data / Labs",
+      "summary": "Dangerous object detection, real-time recommendation, moderation/forecast.",
+      "tags": ["Kafka", "Spark", "Hadoop", "ML/DL"],
+      "problem": "Show reusable patterns around Kafka/Spark/HDFS for live AI.",
+      "solution": "Three industrializable labs with Kafka ingestion, Spark streaming/batch, HDFS/Hive storage, APIs.",
+      "architecture": "Use-case topics, Spark streaming for features, batch for aggregations, APIs to serve models.",
+      "diagram": "graph TD; Ingest[Kafka topics]-->SparkStream[Spark Streaming Features]; SparkStream-->HDFS[(HDFS/Hive)]; HDFS-->ML[ML/DL Models]; ML-->API[REST API]; API-->UI[Real-time UI]",
+      "stack": ["Kafka", "Spark", "HDFS", "Hive", "Python", "React"],
+      "highlights": [
+        "Dangerous object detection (video stream → Kafka → Spark → HDFS → API → UI).",
+        "Real-time recommendations (interactions → Kafka → Spark → HDFS/Hive → ML/DL model).",
+        "Chat moderation or time-series forecast (Kafka → Spark → model → notifications)."
+      ],
+      "results": [
+        "Library of reusable data/AI patterns.",
+        "Clear docs for handover."
+      ],
+      "learnings": [
+        "Choosing formats (Parquet/Avro) per use case.",
+        "Partitioning and retention for Kafka/HDFS."
+      ],
+      "security": [
+        "Schema controls + event validation.",
+        "PII cleaning on the streams.",
+        "API guardrails (quotas, rate limits)."
+      ],
+      "impact": "Fast showcase of repeatable data/AI patterns.",
+      "links": {
+        "repo": "https://github.com/Mkr78",
+        "demo": "",
+        "doc": ""
+      }
+    },
+    {
+      "slug": "fullstack-mern",
+      "title": "Fullstack MERN app",
+      "tagline": "Full CRUD, JWT auth, modern UI",
+      "type": "Fullstack",
+      "summary": "Modular MERN base with protected routes, forms, role management.",
+      "tags": ["Auth", "CRUD", "API", "UI"],
+      "problem": "Provide a clean, reusable MERN starter.",
+      "solution": "Express + MongoDB backend, React frontend with reusable components, JWT + validation.",
+      "architecture": "REST API (controllers/services) + MongoDB + React client.",
+      "stack": ["MongoDB", "Express", "React", "Node", "JWT"],
+      "highlights": [
+        "Typical CRUD with filters.",
+        "Role and permission management.",
+        "Reactive UI with validated forms."
+      ],
+      "results": ["Ready-to-clone SaaS foundation."],
+      "learnings": ["Folder layout that scales."],
+      "security": ["Joi/celebrate validation", "Short-lived JWT", "Headers + CORS tuned"],
+      "status": "To be completed / public demo WIP",
+      "links": {
+        "repo": "https://github.com/Mkr78",
+        "demo": "",
+        "doc": ""
+      }
+    },
+    {
+      "slug": "gestion-rh",
+      "title": "“Smart HR” project",
+      "tagline": "Python + web app (IPSSI) with data/AI flavor",
+      "type": "Python / Data",
+      "summary": "Employee management with automation and indicators.",
+      "tags": ["Python", "Web", "Data/AI", "Management"],
+      "problem": "Digitalize and analyze HR data.",
+      "solution": "Python backend, web UI, data scripts for KPIs and alerts.",
+      "architecture": "Python API + storage + web UI.",
+      "stack": ["Python", "Flask/FastAPI", "Web frontend"],
+      "highlights": [
+        "Automated HR flows (CRUD, alerts).",
+        "Computed KPIs (absences, performance)."
+      ],
+      "results": ["Functional prototype, ready to industrialize."],
+      "learnings": ["Handling sensitive data with guardrails."],
+      "security": ["Restricted access, validation, audit logs"],
+      "status": "Academic prototype",
+      "links": {
+        "repo": "https://github.com/Mkr78",
+        "demo": "",
+        "doc": ""
+      }
+    }
+  ],
+  "openData": {
+    "title": "Open Data ideas / prototypes",
+    "items": [
+      {
+        "title": "SoGood — nutri-score + NLP",
+        "description": "Nutrition analysis + NLP summary of ingredients.",
+        "status": "Prototype / to publish",
+        "tags": ["Open Data", "NLP", "Health"]
+      },
+      {
+        "title": "NYC Crime map",
+        "description": "Spatio-temporal map + forecasts.",
+        "status": "Prototype / to publish",
+        "tags": ["Open Data", "Spatial", "Forecast"]
+      },
+      {
+        "title": "Maritime tracking",
+        "description": "Live API → Kafka → congestion detection → map.",
+        "status": "Prototype / to publish",
+        "tags": ["Streaming", "Kafka", "Mapping"]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": [
+      {
+        "name": "Data Engineering",
+        "level": "Advanced",
+        "items": ["Kafka", "Spark (batch/stream)", "Hadoop/HDFS", "Parquet/Avro", "Airflow patterns", "SQL", "Data modelling"]
+      },
+      {
+        "name": "AI / ML / DL",
+        "level": "Advanced",
+        "items": ["CNN FER", "Recommendation", "Basic NLP", "Local RAG", "Feature store patterns", "Model evaluation"]
+      },
+      {
+        "name": "Fullstack",
+        "level": "Advanced",
+        "items": ["React/Next.js", "Node/Express", "MongoDB", "REST APIs", "JWT auth", "Product-driven UI/UX"]
+      },
+      {
+        "name": "DevOps / Cloud",
+        "level": "Intermediate",
+        "items": ["Docker/Compose", "CI/CD GitHub Actions", "Observability", "Vercel/Netlify", "Linux"]
+      },
+      {
+        "name": "Security & Methods",
+        "level": "Advanced",
+        "items": ["Zero-trust principles", "Secret management", "Schema validation", "API testing", "Project management / prioritization"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "roles": [
+      {
+        "role": "Freelance Fullstack Data & AI Consultant",
+        "company": "Independent missions",
+        "period": "July 2026 - present",
+        "location": "Cergy / remote",
+        "description": "Designed data-driven web products: React dashboards, Python/Flask APIs, Supabase integration, shadcn/Tailwind interfaces, and demo-ready workflows.",
+        "achievements": [
+          "Structured a Vite/React/TypeScript application base with reusable UI components, forms, dashboards, and visualizations.",
+          "Connected frontend, API, and data layers around business use cases: diagnostics, KPI tracking, scoring, and clear output for non-technical users.",
+          "Added lightweight delivery discipline: npm scripts, environment configuration, frontend/backend boundaries, and handover documentation."
+        ],
+        "stack": ["React", "TypeScript", "Vite", "Tailwind", "shadcn-ui", "Supabase", "Flask", "Recharts"],
+        "security": ["Environment variables", "Form/API validation", "Client/server separation", "Supabase access rules preparation"]
+      },
+      {
+        "role": "Freelance AI / NLP / Recommendation Consultant",
+        "company": "Independent missions",
+        "period": "April 2026 - June 2026",
+        "location": "Cergy / remote",
+        "description": "Prototyped applied AI building blocks: semantic recommendation, content classification, NLP exploration, and scoring APIs ready for product integration.",
+        "achievements": [
+          "Built a recommendation pipeline with Sentence Transformers embeddings, FAISS, experimentation notebooks, and a FastAPI service.",
+          "Prepared NLP features on IMDB data: cleaning, topics, sentiment, similarity, and outputs usable in a Streamlit or React UI.",
+          "Compared ML/DL approaches pragmatically across POC speed, explainability, inference cost, and deployment simplicity."
+        ],
+        "stack": ["Python", "FastAPI", "Pandas", "scikit-learn", "PyTorch", "Sentence Transformers", "FAISS", "Redis", "Streamlit"],
+        "security": ["Dataset cleaning", "Secret isolation", "API input controls", "Sensitive dependency limitation"]
+      },
+      {
+        "role": "Freelance Data Engineering / Lakehouse Consultant",
+        "company": "Independent missions",
+        "period": "January 2026 - March 2026",
+        "location": "Cergy / remote",
+        "description": "Built real-time pipelines and data lake/lakehouse architectures around music events, with Kafka ingestion, Spark processing, and API/dashboard exposure.",
+        "achievements": [
+          "Deployed a Docker Compose architecture combining Kafka, Spark Structured Streaming, MinIO/HDFS storage, Flask API, and React dashboard.",
+          "Modeled semi-structured events: listens, likes, shares, audio metadata, Parquet partitioning, and real-time metrics.",
+          "Implemented micro-batch flows, health/metrics/events endpoints, and operational documentation to replay and monitor processing."
+        ],
+        "stack": ["Kafka", "Spark Structured Streaming", "HDFS", "MinIO", "Delta Lake", "Parquet", "Flask", "React", "Docker Compose"],
+        "security": ["Secret management via env", "Schema controls", "Healthchecks", "Data cleaning before storage"]
+      },
+      {
+        "role": "Fullstack Web Developer",
+        "company": "FFTT",
+        "period": "2023 - 2025",
+        "location": "Paris, France",
+        "description": "Work-study role focused on web applications, secure REST APIs, real-time data, and cloud/devops deployments.",
+        "achievements": [
+          "Designed REST APIs with Python, Django REST Framework, and Keycloak authentication integration.",
+          "Built React/TypeScript interfaces with Redux Toolkit, Tailwind CSS, PHP, and Node.js depending on application needs.",
+          "Collected and processed real-time energy data with Kafka, PySpark, Pandas, and NumPy.",
+          "Containerized and deployed services with Docker, Kubernetes, GitLab CI/CD, and cloud environments."
+        ],
+        "stack": ["React", "TypeScript", "Python", "Django REST Framework", "PostgreSQL", "MongoDB", "Docker", "Kubernetes", "AWS", "Kafka", "PySpark"],
+        "security": ["Keycloak", "Role management", "Secure APIs", "Unit and integration tests", "Swagger/OpenAPI"]
+      },
+      {
+        "role": "Fullstack Mobile Developer",
+        "company": "Groupe Louange",
+        "period": "2022 - 2023",
+        "location": "France",
+        "description": "Work-study role on a cross-platform mobile application with a Python/Django backend, geolocation, and deployment automation.",
+        "achievements": [
+          "Built a React Native mobile application for field use cases.",
+          "Integrated real-time station geolocation with Mapbox.",
+          "Designed secure REST APIs with Django and MongoDB.",
+          "Containerized services and automated deployments with Docker."
+        ],
+        "stack": ["React Native", "Python", "Django", "MongoDB", "Docker", "Mapbox"],
+        "security": ["Secure APIs", "Mobile/API separation", "Environment variables", "Data access controls"]
+      },
+      {
+        "role": "Fullstack Web Developer",
+        "company": "A-TEAM",
+        "period": "2021 - 2022",
+        "location": "France",
+        "description": "Fullstack internship around a Java/Spring Boot and Angular web application with PostgreSQL persistence.",
+        "achievements": [
+          "Developed REST APIs with Java Spring Boot.",
+          "Implemented persistence with PostgreSQL, Hibernate, and JPA.",
+          "Built Angular web interfaces.",
+          "Implemented authentication, role management, unit tests, and integration tests."
+        ],
+        "stack": ["Java", "Spring Boot", "Angular", "PostgreSQL", "Hibernate", "JPA", "Git"],
+        "security": ["Authentication", "Role management", "Unit tests", "Integration tests"]
+      },
+      {
+        "role": "Big Data & AI Developer",
+        "company": "Internal & academic projects",
+        "period": "2023 - 2025",
+        "location": "Cergy, France",
+        "description": "Designed internal data/AI tools: Kafka/Spark ingestion, secure APIs, dashboards, automation.",
+        "achievements": [
+          "Integrated APIs and data pipelines (Kafka/Spark) with monitoring.",
+          "Automated batch/stream jobs with security guardrails.",
+          "Performance optimizations (queries, caching, latency budgets)."
+        ],
+        "stack": ["Kafka", "Spark", "HDFS", "React/Next.js", "Node", "Flask", "Docker"],
+        "security": ["Strict validation", "Secret management", "Rate limiting", "Access control"]
+      }
+    ]
+  },
+  "academic": {
+    "title": "Academic Background",
+    "subtitle": "Fullstack, Big Data, AI, and cloud/devops certifications.",
+    "education": [
+      {
+        "degree": "Master's degree in Development, Big Data & AI",
+        "school": "IPSSI Paris",
+        "period": "2025",
+        "location": "Paris, France",
+        "details": ["Big Data architecture", "Machine Learning / Deep Learning", "Cloud, DevOps, and security", "Industrializable data/AI projects"]
+      },
+      {
+        "degree": "Bachelor's degree in Fullstack Development",
+        "school": "ENSITECH",
+        "period": "2023",
+        "location": "France",
+        "details": ["Web and mobile development", "REST APIs", "Databases", "Project methods"]
+      }
+    ],
+    "certificationsTitle": "Certifications",
+    "certifications": [
+      "Machine Learning APIs on Google Cloud Badge",
+      "Databricks - Generative AI Fundamentals",
+      "Certified GitHub Foundations"
+    ],
+    "languagesTitle": "Languages",
+    "languages": ["French", "English", "Spanish", "Arabic"]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let’s talk data/AI, security, and pragmatic products.",
+    "copyEmail": "Copy email",
+    "emailCta": "Email",
+    "linkedinCta": "LinkedIn",
+    "githubCta": "GitHub",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "hint": "Form wired to Formspree (editable).",
+      "providerNote": "Or swap to the Vercel serverless route."
+    }
+  },
+  "blog": {
+    "title": "Notes & articles",
+    "subtitle": "Ideas on streaming data, security, and applied AI.",
+    "posts": [
+      {
+        "slug": "pipeline-kafka-spark-hdfs-docker",
+        "title": "Real-time pipeline Kafka → Spark → HDFS in Docker",
+        "description": "Full setup, schemas, offset and checkpoint handling.",
+        "readingTime": "6 min",
+        "topics": ["Kafka", "Spark", "Docker"],
+        "status": "Draft"
+      },
+      {
+        "slug": "secure-node-express-api",
+        "title": "Securing a Node/Express API: JWT, rate-limit, validation",
+        "description": "Security checklist to ship fast without skipping the basics.",
+        "readingTime": "5 min",
+        "topics": ["Node", "Security", "API"],
+        "status": "Draft"
+      },
+      {
+        "slug": "local-rag-best-practices",
+        "title": "Local RAG: best practices and limits",
+        "description": "Pragmatic approach for an on-prem RAG with controlled resources.",
+        "readingTime": "7 min",
+        "topics": ["RAG", "NLP", "Ops"],
+        "status": "Draft"
+      }
+    ]
+  }
+}

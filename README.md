@@ -23,9 +23,27 @@ Puis ouvrir `http://localhost:3000`.
 ## Vérifications
 
 ```bash
+npm run validate:content
 npm run lint
 npm run build
 ```
+
+Ou tout lancer :
+
+```bash
+npm run check
+```
+
+## Maintenance du contenu
+
+Avant d'ajouter ou modifier un projet, une expérience ou le parcours académique, lire :
+
+`docs/content-guide.md`
+
+Les données principales sont dans :
+
+- `src/content/fr.json`
+- `src/content/en.json`
 
 ## Déploiement recommandé : Vercel
 

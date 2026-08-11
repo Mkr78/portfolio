@@ -15,14 +15,16 @@ export function ProjectsGrid() {
 
   const tags = useMemo(() => {
     const unique = new Set<string>();
-    content.projects.forEach((p) => p.tags.forEach((t) => unique.add(t)));
+    content.projects.forEach((project) => {
+      project.tags.forEach((tag) => unique.add(tag));
+    });
     return ["all", ...Array.from(unique)];
   }, [content.projects]);
 
   const filtered =
     filter === "all"
       ? content.projects
-      : content.projects.filter((p) => p.tags.includes(filter));
+      : content.projects.filter((project) => project.tags.includes(filter));
 
   return (
     <section className="space-y-4">
@@ -33,8 +35,8 @@ export function ProjectsGrid() {
           </p>
           <p className="text-sm text-[color:var(--muted)]">
             {locale === "fr"
-              ? "Filtre rapide par tags : Big Data, IA, ML/DL, GenAI, Fullstack, DevOps, Sécurité."
-              : "Quick filter by tags: Big Data, AI/ML/DL, GenAI, Fullstack, DevOps, Security."}
+              ? "Filtre rapide par tags : Big Data, IA, ML/DL, Fullstack, DevOps, Sécurité."
+              : "Quick filter by tags: Big Data, AI/ML/DL, Fullstack, DevOps, Security."}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">

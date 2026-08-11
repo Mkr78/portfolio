@@ -17,7 +17,10 @@ type Props = {
 
 export function ProjectCard({ project, onSelect, compact }: Props) {
   const { locale } = useLanguage();
-  const cta = locale === "fr" ? (compact ? "Voir" : "Détails") : compact ? "View" : "Details";
+  const cta =
+    locale === "fr" ? (compact ? "Voir" : "Détails") : compact ? "View" : "Details";
+  const securityLabel = locale === "fr" ? "Sécurité" : "Security";
+
   return (
     <motion.div
       layout
@@ -28,7 +31,13 @@ export function ProjectCard({ project, onSelect, compact }: Props) {
       className="h-full"
     >
       <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-black p-6 shadow-xl shadow-black/30">
-        <div className="pointer-events-none absolute inset-0 opacity-30 blur-3xl transition-transform duration-500 group-hover:scale-110" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, rgba(45,212,191,0.25), transparent 25%), radial-gradient(circle at 80% 0%, rgba(59,130,246,0.15), transparent 30%)" }} />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-30 blur-3xl transition-transform duration-500 group-hover:scale-110"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 20% 20%, rgba(45,212,191,0.25), transparent 25%), radial-gradient(circle at 80% 0%, rgba(59,130,246,0.15), transparent 30%)"
+          }}
+        />
         <div className="relative z-10 flex flex-col gap-4">
           <div className="overflow-hidden rounded-xl border border-white/5">
             {project.image ? (
@@ -55,7 +64,9 @@ export function ProjectCard({ project, onSelect, compact }: Props) {
             <Badge glow className="bg-white/10 text-cyan-100">
               {project.type}
             </Badge>
-            <span className="text-xs text-white/60">{project.status}</span>
+            {project.status && (
+              <span className="text-xs text-white/60">{project.status}</span>
+            )}
           </div>
           <div className="flex flex-col gap-2">
             <h3 className="text-lg font-semibold text-white">{project.title}</h3>
@@ -95,7 +106,7 @@ export function ProjectCard({ project, onSelect, compact }: Props) {
             )}
             {project.security && project.security.length > 0 && (
               <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-100">
-                <Shield size={14} /> Sécurité
+                <Shield size={14} /> {securityLabel}
               </span>
             )}
           </div>

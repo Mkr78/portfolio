@@ -53,7 +53,7 @@ Les données principales sont dans :
 4. Framework : Next.js.
 5. Build command : `npm run build`.
 6. Ajouter les variables d'environnement :
-   - `NEXT_PUBLIC_SITE_URL=https://votre-url.vercel.app`
+   - `NEXT_PUBLIC_SITE_URL=https://portfolio-olive-six-16.vercel.app`
 
 Vercel fournit HTTPS automatiquement, CDN, previews par branche et une URL gratuite en `.vercel.app`.
 

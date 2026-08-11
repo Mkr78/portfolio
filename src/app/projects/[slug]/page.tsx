@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllProjectSlugs, getProjectBySlug, getContent } from "@/lib/content";
 import { ProjectDetailShell } from "@/components/project-detail-shell";
+import { getSiteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!slug) return {};
   const project = getProjectBySlug(slug, "fr") ?? getProjectBySlug(slug, "en");
   if (!project) return {};
-  const site = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  const site = getSiteUrl();
 
   return {
     title: `${project.title} | Mahmoud Mohamed`,

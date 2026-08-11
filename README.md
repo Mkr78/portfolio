@@ -63,7 +63,7 @@ Vercel fournit HTTPS automatiquement, CDN, previews par branche et une URL gratu
 - `.env.example` documente les variables publiques attendues.
 - Les headers de base sont configurés dans `next.config.ts`.
 - Le contact se fait par email direct, sans formulaire ni service tiers.
-- Le CV n'est pas publié pour l'instant. Il sera ajouté dans `public/cv.pdf` après hébergement, une fois l'URL publique intégrée au PDF.
+- Le CV est publié dans `public/cv.pdf` et accessible via `/cv.pdf`.
 
 ## Pages
 

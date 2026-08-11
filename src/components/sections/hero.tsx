@@ -1,15 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/language-context";
 
 export function Hero() {
-  const { content } = useLanguage();
+  const { content, locale } = useLanguage();
   const hero = content.hero;
+  const cvLabel = locale === "fr" ? "Télécharger mon CV" : "Download my resume";
 
   return (
     <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/10 via-black to-black p-8 shadow-2xl shadow-cyan-500/10 md:p-12">
@@ -54,6 +55,12 @@ export function Hero() {
           <Link href="/contact" className="w-full sm:w-auto">
             <Button variant="secondary" className="w-full">
               {hero.ctaContact}
+            </Button>
+          </Link>
+          <Link href="/cv.pdf" className="w-full sm:w-auto" target="_blank">
+            <Button variant="outline" className="w-full border-white/20 text-white">
+              <Download size={16} />
+              {cvLabel}
             </Button>
           </Link>
         </div>

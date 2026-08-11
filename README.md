@@ -75,4 +75,3 @@ Vercel fournit HTTPS automatiquement, CDN, previews par branche et une URL gratu
 - `/skills`
 - `/experience`
 - `/contact`
-- `/blog`

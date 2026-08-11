@@ -37,8 +37,7 @@
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
-    "contact": "Contact",
-    "blog": "Blog"
+    "contact": "Contact"
   },
   "about": {
     "title": "About",
@@ -74,10 +73,8 @@
       "summary": "Feed, real-time notifications, FER via webcam, secure Node API.",
       "tags": [
         "Fullstack",
-        "AI/ML",
-        "Real-time",
-        "Security",
-        "Docker"
+        "AI",
+        "Real-time"
       ],
       "problem": "Ship a rich social platform with a live AI service in a single weekend without dropping basic security.",
       "solution": "Modular build: React front, Node/Express API + MongoDB, Flask AI service (CNN FER), Socket.io for realtime. Flow: webcam → Flask API → emotion result → badge in UI.",
@@ -127,8 +124,6 @@
       "tags": [
         "Big Data",
         "Streaming",
-        "Spark",
-        "Kafka",
         "Dashboard"
       ],
       "problem": "Ingest and process music events in real time with durable storage and an API layer.",
@@ -177,10 +172,9 @@
       "type": "Big Data / Labs",
       "summary": "Dangerous object detection, real-time recommendation, moderation/forecast.",
       "tags": [
-        "Kafka",
-        "Spark",
-        "Hadoop",
-        "ML/DL"
+        "Big Data",
+        "AI",
+        "Streaming"
       ],
       "problem": "Show reusable patterns around Kafka/Spark/HDFS for live AI.",
       "solution": "Three industrializable labs with Kafka ingestion, Spark streaming/batch, HDFS/Hive storage, APIs.",
@@ -225,10 +219,9 @@
       "type": "Fullstack",
       "summary": "Modular MERN base with protected routes, forms, role management.",
       "tags": [
-        "Auth",
-        "CRUD",
+        "Fullstack",
         "API",
-        "UI"
+        "Security"
       ],
       "problem": "Provide a clean, reusable MERN starter.",
       "solution": "Express + MongoDB backend, React frontend with reusable components, JWT + validation.",
@@ -268,10 +261,9 @@
       "type": "Python / Data",
       "summary": "Employee management with automation and indicators.",
       "tags": [
-        "Python",
-        "Web",
-        "Data/AI",
-        "Management"
+        "Fullstack",
+        "Data",
+        "Python"
       ],
       "problem": "Digitalize and analyze HR data.",
       "solution": "Python backend, web UI, data scripts for KPIs and alerts.",
@@ -636,47 +628,5 @@
       "hint": "Form wired to Formspree (editable).",
       "providerNote": "Or swap to the Vercel serverless route."
     }
-  },
-  "blog": {
-    "title": "Notes & articles",
-    "subtitle": "Ideas on streaming data, security, and applied AI.",
-    "posts": [
-      {
-        "slug": "pipeline-kafka-spark-hdfs-docker",
-        "title": "Real-time pipeline Kafka → Spark → HDFS in Docker",
-        "description": "Full setup, schemas, offset and checkpoint handling.",
-        "readingTime": "6 min",
-        "topics": [
-          "Kafka",
-          "Spark",
-          "Docker"
-        ],
-        "status": "Draft"
-      },
-      {
-        "slug": "secure-node-express-api",
-        "title": "Securing a Node/Express API: JWT, rate-limit, validation",
-        "description": "Security checklist to ship fast without skipping the basics.",
-        "readingTime": "5 min",
-        "topics": [
-          "Node",
-          "Security",
-          "API"
-        ],
-        "status": "Draft"
-      },
-      {
-        "slug": "local-rag-best-practices",
-        "title": "Local RAG: best practices and limits",
-        "description": "Pragmatic approach for an on-prem RAG with controlled resources.",
-        "readingTime": "7 min",
-        "topics": [
-          "RAG",
-          "NLP",
-          "Ops"
-        ],
-        "status": "Draft"
-      }
-    ]
   }
 }

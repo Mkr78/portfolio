@@ -28,6 +28,15 @@ Pour chaque ajout, il faut maintenir les deux langues cohérentes.
 4. Ajouter `security` dès que le projet contient API, données, auth, fichier, IA ou déploiement.
 5. Ajouter `status` pour clarifier l'état : `Démo produit`, `Prototype académique`, `À publier`, etc.
 6. Ne pas mettre de liens vides. Si une démo n'existe pas, supprimer `demo`.
+7. Limiter `tags` à 3 maximum. Utiliser des familles larges plutôt que des technos isolées :
+   - `Big Data`
+   - `Streaming`
+   - `IA`
+   - `Fullstack`
+   - `API`
+   - `Sécurité`
+   - `Dashboard`
+   - `Python`
 
 ## Choisir les projets à mettre en avant
 

@@ -16,8 +16,7 @@ const sections = [
   { href: "/about", key: "about" },
   { href: "/skills", key: "skills" },
   { href: "/experience", key: "experience" },
-  { href: "/contact", key: "contact" },
-  { href: "/blog", key: "blog" }
+  { href: "/contact", key: "contact" }
 ];
 
 export function Navbar() {

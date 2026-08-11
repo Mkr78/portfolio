@@ -70,6 +70,9 @@ function validateProject(project, locale) {
     if (isBlank(project[field])) errors.push(`${label}.${field}: empty string`);
   });
   requireNonEmptyArray(project.tags, `${label}.tags`);
+  if (Array.isArray(project.tags) && project.tags.length > 3) {
+    errors.push(`${label}.tags: keep at most 3 broad tags`);
+  }
   requireNonEmptyArray(project.stack, `${label}.stack`);
   requireNonEmptyArray(project.highlights, `${label}.highlights`);
   requireNonEmptyArray(project.results, `${label}.results`);

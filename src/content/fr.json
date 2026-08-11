@@ -37,8 +37,7 @@
     "about": "À propos",
     "skills": "Compétences",
     "experience": "Expérience",
-    "contact": "Contact",
-    "blog": "Blog"
+    "contact": "Contact"
   },
   "about": {
     "title": "À propos",
@@ -74,10 +73,8 @@
       "summary": "Feed, notifications temps réel, IA FER via webcam, API Node sécurisée.",
       "tags": [
         "Fullstack",
-        "IA/ML",
-        "Temps réel",
-        "Sécurité",
-        "Docker"
+        "IA",
+        "Temps réel"
       ],
       "problem": "Valider en un week-end une plateforme sociale riche avec un service IA temps réel, sans sacrifier la sécurité de base.",
       "solution": "Architecture modulaire : front React, API Node/Express + MongoDB, service IA Flask (CNN FER), Socket.io pour le temps réel. Flow IA : webcam → API Flask → réponse émotion → badge dans l’UI.",
@@ -127,8 +124,6 @@
       "tags": [
         "Big Data",
         "Streaming",
-        "Spark",
-        "Kafka",
         "Dashboard"
       ],
       "problem": "Ingestion et traitement temps réel d’événements musicaux avec stockage pérenne et exposition API.",
@@ -177,10 +172,9 @@
       "type": "Big Data / Labs",
       "summary": "Détection d’objets dangereux, recommandation temps réel, modération/forecast.",
       "tags": [
-        "Kafka",
-        "Spark",
-        "Hadoop",
-        "ML/DL"
+        "Big Data",
+        "IA",
+        "Streaming"
       ],
       "problem": "Montrer des patterns réutilisables autour de Kafka/Spark/HDFS pour l’IA temps réel.",
       "solution": "Trois labs industrialisables avec ingestion Kafka, Spark streaming/batch, stockage HDFS/Hive et APIs.",
@@ -225,10 +219,9 @@
       "type": "Fullstack",
       "summary": "Application MERN modulaire avec routes protégées, formulaires, gestion des rôles.",
       "tags": [
-        "Auth",
-        "CRUD",
+        "Fullstack",
         "API",
-        "UI"
+        "Sécurité"
       ],
       "problem": "Montrer un socle MERN propre et réutilisable.",
       "solution": "Backend Express + MongoDB, frontend React avec composants réutilisables, sécurisation JWT + validation.",
@@ -268,10 +261,9 @@
       "type": "Python / Data",
       "summary": "Gestion des employés avec automatisations et indicateurs.",
       "tags": [
-        "Python",
-        "Web",
-        "Data/IA",
-        "Gestion"
+        "Fullstack",
+        "Data",
+        "Python"
       ],
       "problem": "Digitaliser et analyser des données RH.",
       "solution": "Backend Python, interface web, scripts data pour indicateurs et alertes.",
@@ -636,47 +628,5 @@
       "hint": "Formulaire relié à Formspree (modifiable).",
       "providerNote": "Ou utilisez la route serverless Vercel en option."
     }
-  },
-  "blog": {
-    "title": "Notes & articles",
-    "subtitle": "Pistes autour du streaming data, sécurité et IA appliquée.",
-    "posts": [
-      {
-        "slug": "pipeline-kafka-spark-hdfs-docker",
-        "title": "Pipeline temps réel Kafka → Spark → HDFS en Docker",
-        "description": "Setup complet, schémas, gestion des offsets et checkpoints.",
-        "readingTime": "6 min",
-        "topics": [
-          "Kafka",
-          "Spark",
-          "Docker"
-        ],
-        "status": "Brouillon"
-      },
-      {
-        "slug": "securiser-api-node-express",
-        "title": "Sécuriser une API Node/Express : JWT, rate-limit, validation",
-        "description": "Checklist sécurité pour livrer vite sans oublier les bases.",
-        "readingTime": "5 min",
-        "topics": [
-          "Node",
-          "Sécurité",
-          "API"
-        ],
-        "status": "Brouillon"
-      },
-      {
-        "slug": "rag-local-bonnes-pratiques",
-        "title": "RAG local : bonnes pratiques et limites",
-        "description": "Approche pragmatique pour un RAG on-prem avec ressources maîtrisées.",
-        "readingTime": "7 min",
-        "topics": [
-          "RAG",
-          "NLP",
-          "Ops"
-        ],
-        "status": "Brouillon"
-      }
-    ]
   }
 }

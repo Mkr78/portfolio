@@ -56,15 +56,6 @@ export type Education = {
   details: string[];
 };
 
-export type BlogPost = {
-  slug: string;
-  title: string;
-  description: string;
-  readingTime: string;
-  topics: string[];
-  status?: string;
-};
-
 export type OpenDataIdea = {
   title: string;
   description: string;
@@ -96,7 +87,6 @@ export type PortfolioContent = {
     skills: string;
     experience: string;
     contact: string;
-    blog: string;
   };
   about: {
     title: string;
@@ -143,10 +133,5 @@ export type PortfolioContent = {
       hint: string;
       providerNote: string;
     };
-  };
-  blog: {
-    title: string;
-    subtitle: string;
-    posts: BlogPost[];
   };
 };

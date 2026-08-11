@@ -27,8 +27,7 @@ export function CommandPalette() {
       { label: content.navigation.projects, href: "/projects", group: "pages" },
       { label: content.navigation.skills, href: "/skills", group: "pages" },
       { label: content.navigation.experience, href: "/experience", group: "pages" },
-      { label: content.navigation.contact, href: "/contact", group: "pages" },
-      { label: content.navigation.blog, href: "/blog", group: "pages" }
+      { label: content.navigation.contact, href: "/contact", group: "pages" }
     ];
     return base;
   }, [content.navigation]);
